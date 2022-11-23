@@ -5,13 +5,10 @@ import {
   Roboto_400Regular,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
-
 import theme from './src/theme';
-
-import { Groups } from '@screens/Groups';
-import { NewGroup } from '@screens/NewGroup';
-import { Players } from '@screens/Players';
+import { Routes } from '@routes/index';
 import { Loading } from '@components/Loading';
+
 
 export default function App() {
   const [isFontsLoaded] = useFonts({
@@ -26,7 +23,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {isFontsLoaded ? <Players /> : <Loading />}
+      {isFontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
